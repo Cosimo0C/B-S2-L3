@@ -10,4 +10,8 @@ public class Prodotto {
         this.categgory=categgory;
         this.price=price;
     }
+    @Override
+    public String toString(){
+        return this.id +" "+this.name+" "+this.categgory+" "+this.price;
+    }
 }
