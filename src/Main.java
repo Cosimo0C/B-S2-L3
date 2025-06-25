@@ -1,7 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.LocalDate;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-
+        Random random=new Random();
+        LocalDate oggi= LocalDate.now();
+        int rdmDay= random.nextInt(30);
+        LocalDate deliveryDay=oggi.plusDays(rdmDay);
+        Cliente c1=new Cliente(011, "mike", 2);
+        Cliente c2=new Cliente(012, "loris", 3);
+        Cliente c3=new Cliente(013, "john", 2);
+        Prodotto p1= new Prodotto(111, "libro1", "Books", 100);
+        Prodotto p2= new Prodotto(112, "libro2", "Books", 15);
+        Prodotto p3= new Prodotto(113, "libro3", "Books", 150);
+        Ordine o1=new Ordine(222, "ok",oggi, deliveryDay, c1);
+        Ordine o2=new Ordine(222, "no",oggi, deliveryDay, c2);
+        Ordine o3=new Ordine(222, "ok",oggi, deliveryDay, c3);
     }
 }

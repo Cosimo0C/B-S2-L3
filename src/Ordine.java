@@ -8,7 +8,7 @@ public class Ordine {
     protected LocalDate deliveryDate;
     protected List<Prodotto> prodotto;
     protected Cliente cliente;
-    Ordine(long id, String status, LocalDate orderDate, LocalDate deliveryDate, List<Prodotto> prodotto, Cliente cliente){
+    Ordine(long id, String status, LocalDate orderDate, LocalDate deliveryDate, Cliente cliente){
         this.id=id;
         this.status=status;
         this.orderDate=orderDate;
